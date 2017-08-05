@@ -1,0 +1,61 @@
+<%= form_for(@different) do |f| %>
+  <% if @different.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@different.errors.count, "error") %> prohibited this different from being saved:</h2>
+
+      <ul>
+      <% @different.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :room_name %><br>
+    <%= f.text_field :room_name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br>
+    <%= f.text_field :picture %>
+  </div>
+  <div class="field">
+    <%= f.label :room_type %><br>
+    <%= f.text_field :room_type %>
+  </div>
+  <div class="field">
+    <%= f.label :guests %><br>
+    <%= f.number_field :guests %>
+  </div>
+  <div class="field">
+    <%= f.label :bedroom %><br>
+    <%= f.number_field :bedroom %>
+  </div>
+  <div class="field">
+    <%= f.label :bed %><br>
+    <%= f.number_field :bed %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :houserules %><br>
+    <%= f.text_field :houserules %>
+  </div>
+  <div class="field">
+    <%= f.label :availability %><br>
+    <%= f.number_field :availability %>
+  </div>
+  <div class="field">
+    <%= f.label :wifi %><br>
+    <%= f.check_box :wifi %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

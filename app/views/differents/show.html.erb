@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @different.room_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @different.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @different.picture %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @different.room_type %>
+</p>
+
+<p>
+  <strong>Guests:</strong>
+  <%= @different.guests %>
+</p>
+
+<p>
+  <strong>Bedroom:</strong>
+  <%= @different.bedroom %>
+</p>
+
+<p>
+  <strong>Bed:</strong>
+  <%= @different.bed %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @different.price %>
+</p>
+
+<p>
+  <strong>Houserules:</strong>
+  <%= @different.houserules %>
+</p>
+
+<p>
+  <strong>Availability:</strong>
+  <%= @different.availability %>
+</p>
+
+<p>
+  <strong>Wifi:</strong>
+  <%= @different.wifi %>
+</p>
+
+<%= link_to 'Edit', edit_different_path(@different) %> |
+<%= link_to 'Back', differents_path %>
+<%= link_to 'Comment', new_comment_path %>
+

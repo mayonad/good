@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Differents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Picture</th>
+      <th>Type</th>
+      <th>Guests</th>
+      <th>Bedroom</th>
+      <th>Bed</th>
+      <th>Price</th>
+      <th>Houserules</th>
+      <th>Availability</th>
+      <th>Wifi</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @differents.each do |different| %>
+      <tr>
+        <td><%= different.room_name %></td>
+        <td><%= different.description %></td>
+        <td><%= different.picture %></td>
+        <td><%= different.room_type %></td>
+        <td><%= different.guests %></td>
+        <td><%= different.bedroom %></td>
+        <td><%= different.bed %></td>
+        <td><%= different.price %></td>
+        <td><%= different.houserules %></td>
+        <td><%= different.availability %></td>
+        <td><%= different.wifi %></td>
+        <td><%= link_to 'Show', different %></td>
+        <td><%= link_to 'Edit', edit_different_path(different) %></td>
+        <td><%= link_to 'Destroy', different, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Different', new_different_path %>

@@ -1,0 +1,2 @@
+module DifferentsHelper
+end
