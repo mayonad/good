@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170805103119) do
+ActiveRecord::Schema.define(version: 20170807055500) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "content"
@@ -34,8 +34,12 @@ ActiveRecord::Schema.define(version: 20170805103119) do
     t.string   "houserules"
     t.integer  "availability"
     t.boolean  "wifi"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
 end

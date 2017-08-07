@@ -54,7 +54,7 @@
   <strong>Wifi:</strong>
   <%= @different.wifi %>
 </p>
-
+<%= image_tag @different.photo.url(:small) %>
 <%= link_to 'Edit', edit_different_path(@different) %> |
 <%= link_to 'Back', differents_path %>
 <%= link_to 'Comment', new_comment_path %>

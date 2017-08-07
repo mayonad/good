@@ -1,4 +1,4 @@
-<%= form_for(@different) do |f| %>
+<%= form_for(@different, :html => { :multipart => true }) do |f| %>
   <% if @different.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@different.errors.count, "error") %> prohibited this different from being saved:</h2>
@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :picture %><br>
-    <%= f.text_field :picture %>
+    <%= f.file_field :picture %>
   </div>
   <div class="field">
     <%= f.label :room_type %><br>
@@ -55,6 +55,7 @@
     <%= f.label :wifi %><br>
     <%= f.check_box :wifi %>
   </div>
+  <%= f.file_field :photo %>
   <div class="actions">
     <%= f.submit %>
   </div>

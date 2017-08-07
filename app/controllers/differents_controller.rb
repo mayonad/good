@@ -69,6 +69,6 @@ class DifferentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def different_params
-      params.require(:different).permit(:room_name, :description, :picture, :room_type, :guests, :bedroom, :bed, :price, :houserules, :availability, :wifi)
+      params.require(:different).permit(:photo, :room_name, :description, :picture, :room_type, :guests, :bedroom, :bed, :price, :houserules, :availability, :wifi)
     end
 end
